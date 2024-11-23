@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { Role, Permission } from '../../types';
+import { Role } from '../../types';
 import { useStore } from '../../store/useStore';
 
 interface RoleFormProps {

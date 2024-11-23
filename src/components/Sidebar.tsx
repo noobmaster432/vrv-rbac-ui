@@ -19,7 +19,7 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
   return (
     <div className={`bg-gray-900 text-white transition-all duration-300 ${collapsed ? 'w-16' : 'w-64'}`}>
       <div className="p-4 flex justify-between items-center">
-        {!collapsed && <h1 className="text-xl font-bold">RBAC Admin</h1>}
+        {!collapsed && <h1 className="text-xl font-bold">VRV RBAC</h1>}
         <button onClick={() => setCollapsed(!collapsed)} className="p-2 hover:bg-gray-800 rounded">
           <Menu size={20} />
         </button>
