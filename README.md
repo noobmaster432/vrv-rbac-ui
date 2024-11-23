@@ -1,50 +1,124 @@
-# React + TypeScript + Vite
+# Role-Based Access Control (RBAC) UI  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **Overview**  
 
-Currently, two official plugins are available:
+This project is a **Role-Based Access Control (RBAC)** User Interface implemented using **React.js (Vite)**, **TypeScript**, **Tailwind CSS**, and **Zustand** for state management. It provides an intuitive admin dashboard for managing users, roles, and permissions efficiently and securely.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## **Features**  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### **1. User Management**  
+- View, add, edit, and delete users.  
+- Assign roles to users and manage their statuses (Active/Inactive).  
+- Intuitive UI for seamless user management.  
 
-- Configure the top-level `parserOptions` property like this:
+### **2. Role Management**  
+- Create, update, and delete roles.  
+- Define roles with custom attributes and associated permissions.  
+- Clearly display the relationship between roles and permissions.  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### **3. Dynamic Permissions**  
+- Assign, modify, or revoke permissions for roles dynamically.  
+- Permissions are presented in an easy-to-navigate and user-friendly interface.  
+- Real-time updates for changes in roles and permissions.  
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### **4. Mock API Integration**  
+- Simulates CRUD operations for users, roles, and permissions.  
+- Mimics server responses to validate the functionality of the UI.  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## **Technology Stack**  
+
+### **Frontend**  
+- **Framework**: React.js (Vite)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+
+### **API Simulation**  
+- Mock API for handling CRUD operations.  
+
+---
+
+## **Setup Instructions**  
+
+### **1. Prerequisites**  
+- Node.js and npm installed.  
+- A code editor like Visual Studio Code.  
+
+### **2. Installation**  
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/noobmaster432/vrv-rbac-ui.git
+   cd vrv-rbac-ui
+   ```  
+2. Install dependencies:  
+   ```bash  
+   npm install
+   ```  
+
+### **3. Running the Project**  
+- Start the development server:  
+  ```bash  
+  npm run dev 
+  ```  
+
+---
+
+## **Demo Workflow**  
+
+### **User Management**  
+- Access the **Users** section to manage users.  
+- Add a new user by filling in required details and assigning roles.  
+- Edit user information, toggle their status (Active/Inactive), or delete users.  
+
+### **Role Management**  
+- Navigate to the **Roles** section.  
+- Create new roles with customizable permissions and attributes.  
+- Edit or delete existing roles.  
+
+### **Permissions Management**  
+- View and modify permissions associated with roles in the **Permissions** section.  
+- Add or remove permissions dynamically to maintain proper access control.  
+
+---
+
+## **Enhancements**  
+
+- **Responsive Design**: Optimized for both desktop and mobile views.  
+- **State Management**: Zustand ensures efficient and scalable state handling.  
+- **Search and Filter**: Quickly find users or roles with search and filter options.  
+- **Error Handling**: Graceful handling of edge cases with user-friendly error messages.  
+
+---
+
+## **Folder Structure**  
+```plaintext  
+rbac-ui/  
+├── src/  
+│   ├── components/        # Reusable UI components  
+│   ├── pages/             # Page-level components (Users, Roles, Permissions)  
+│   ├── stores/            # Zustand state management files  
+│   ├── types/             # TypeScript types and interfaces  
+│   ├── utils/             # Utility functions  
+│   ├── App.tsx            # Root component  
+│   └── main.tsx           # Entry point  
+├── public/                # Static assets  
+├── tailwind.config.js     # Tailwind CSS configuration  
+├── tsconfig.json          # TypeScript configuration  
+└── vite.config.ts         # Vite configuration  
+```  
+
+---
+
+## **Live Demo**  
+Check out the live demo here: [Live Demo](https://vrv-rbac-ui.vercel.app/)  
+
+---
+
+## **License**  
+This project is licensed under the MIT License. Feel free to use, modify, and distribute it.  
+
+------------
